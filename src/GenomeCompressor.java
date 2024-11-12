@@ -24,7 +24,6 @@ public class GenomeCompressor {
      * { A, C, T, G } from standard input; compresses and writes the results to standard output.
      */
     public static void compress() {
-
         // TODO: complete the compress() method
 
         BinaryStdOut.close();
