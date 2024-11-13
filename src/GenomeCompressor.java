@@ -33,17 +33,23 @@ public class GenomeCompressor {
      * Reads a sequence of 8-bit extended ASCII characters over the alphabet
      * { A, C, T, G } from standard input; compresses and writes the results to standard output.
      */
-    public static GenomeCompressor() {
-        keys = new int[BEG_SIZE];
-        values = new int[BEG_SIZE];
-    }
+
     public static void compress() {
         // TODO: complete the compress() method
         char c = BinaryStdIn.readChar(SEQUENCE_LENGTH);
         String bin = hash(c); // Add bin to values map
-        // Check hashed place in values[] and evaluate to see if full/existent
-        // Check hashes place in keys[] to see if values match up to newly hashed
-        // Create rehash function for if maps get too large?
+        if(c == 'A') {
+            BinaryStdOut.write(0b00, 2);
+        }
+        if(c == 'C') {
+            BinaryStdOut.write(0b01,2);
+        }
+        if(c == 'G') {
+            BinaryStdOut.write(0b10, 2);
+        }
+        if(c == 'T') {
+            BinaryStdOut.write(0b11, 2);
+        }
 
         // Make key for each possible pattern/sequence of 4 characters and hash them to a different value (figure out how to access read in data)
         // For-loop to check every part of sequence:
