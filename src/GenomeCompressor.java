@@ -25,7 +25,11 @@ public class GenomeCompressor {
      */
     public static void compress() {
         // TODO: complete the compress() method
-
+        // Make key for each possible pattern/sequence of 4 characters and hash them to a different value (figure out how to access read in data)
+        // For-loop to check every part of sequence:
+            // read next 4 bits of data using BinaryStdIn.readChar()--use key to find the hashes and store them as the hashes
+            // Add hash to sequence after converting hash to binary
+        // Save binary hashes as the compression file
         BinaryStdOut.close();
     }
 
@@ -33,9 +37,12 @@ public class GenomeCompressor {
      * Reads a binary sequence from standard input; expands and writes the results to standard output.
      */
     public static void expand() {
-
         // TODO: complete the expand() method
 
+        // Use for-loop to go through each part of the compressed sequence:
+            // Expand each bit/hash into its original value using the map
+            // Add expanded value into sequence
+        // Print out expanded value
         BinaryStdOut.close();
     }
 
