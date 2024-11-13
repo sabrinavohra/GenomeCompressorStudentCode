@@ -45,7 +45,6 @@ public class GenomeCompressor {
         // Check hashes place in keys[] to see if values match up to newly hashed
         // Create rehash function for if maps get too large?
 
-
         // Make key for each possible pattern/sequence of 4 characters and hash them to a different value (figure out how to access read in data)
         // For-loop to check every part of sequence:
             // read next 4 bits of data using BinaryStdIn.readChar()--use key to find the hashes and store them as the hashes
@@ -59,11 +58,10 @@ public class GenomeCompressor {
      */
     public static void expand() {
         // TODO: complete the expand() method
-
-        // Use for-loop to go through each part of the compressed sequence:
-            // Expand each bit/hash into its original value using the map
+        // Use for-loop to go through each part of the compressed sequence
+            // Expand each bit/hash into its original value using the maps to find original values
             // Add expanded value into sequence
-        // Print out expanded value
+        // Set total sequence as String back to its original place
         BinaryStdOut.close();
     }
 
