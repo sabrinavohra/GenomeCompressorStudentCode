@@ -4,22 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b73ab661-840a-4b64-b072-3764519be013" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Genome Compressor Student Code.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BinaryStdIn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BinaryStdOut.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BlickCompressor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BlickTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DumpBinary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GenomeCompressor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/genomeCheck.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/genomeTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/virus.txt" afterDir="false" />
+    <list default="true" id="b73ab661-840a-4b64-b072-3764519be013" name="Changes" comment="Worked on compress().">
+      <change afterPath="$PROJECT_DIR$/src/virus.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WORK_LOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/WORK_LOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GenomeCompressor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenomeCompressor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +17,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "sabrinavohra"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ztblick/GenomeCompressorStudentCode",
+    "accountId": "8caaf94e-82fc-4e2c-9769-ffd00528c73e"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2kcGqQKT0vkDTJ0bFSJOEbWqppH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -43,6 +43,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.GenomeCompressor.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true"
@@ -62,9 +63,55 @@
       <option name="presentableId" value="Default" />
       <updated>1723575642960</updated>
     </task>
+    <task id="LOCAL-00001" summary="Started code.">
+      <option name="closed" value="true" />
+      <created>1731436869674</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731436869674</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Wrote psuedocode.">
+      <option name="closed" value="true" />
+      <created>1731476425384</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731476425384</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Worked on compress().">
+      <option name="closed" value="true" />
+      <created>1731486612838</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731486612838</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Wrote pseudocode.">
+      <option name="closed" value="true" />
+      <created>1731525096129</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731525096129</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Worked on compress().">
+      <option name="closed" value="true" />
+      <created>1731534215894</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731534215894</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Started code." />
+    <MESSAGE value="Wrote psuedocode." />
+    <MESSAGE value="Wrote pseudocode." />
+    <MESSAGE value="Worked on compress()." />
+    <option name="LAST_COMMIT_MESSAGE" value="Worked on compress()." />
   </component>
 </project>

@@ -36,21 +36,24 @@ public class GenomeCompressor {
 
     public static void compress() {
         // TODO: complete the compress() method
-        char c = BinaryStdIn.readChar(SEQUENCE_LENGTH);
-        String bin = hash(c); // Add bin to values map
-        if(c == 'A') {
-            BinaryStdOut.write(0b00, 2);
+        String remaining = BinaryStdIn.readString();
+        int binary = remaining.length();
+        BinaryStdOut.write(binary);
+        for(int i = 0; i < remaining.length(); i++) {
+            char c = remaining.charAt(i);
+            if(c == 'A') {
+                BinaryStdOut.write(0b00, 2);
+            }
+            else if(c == 'C') {
+                BinaryStdOut.write(0b01,2);
+            }
+            else if(c == 'G') {
+                BinaryStdOut.write(0b10, 2);
+            }
+            else {
+                BinaryStdOut.write(0b11, 2);
+            }
         }
-        if(c == 'C') {
-            BinaryStdOut.write(0b01,2);
-        }
-        if(c == 'G') {
-            BinaryStdOut.write(0b10, 2);
-        }
-        if(c == 'T') {
-            BinaryStdOut.write(0b11, 2);
-        }
-
         // Make key for each possible pattern/sequence of 4 characters and hash them to a different value (figure out how to access read in data)
         // For-loop to check every part of sequence:
             // read next 4 bits of data using BinaryStdIn.readChar()--use key to find the hashes and store them as the hashes
@@ -64,6 +67,22 @@ public class GenomeCompressor {
      */
     public static void expand() {
         // TODO: complete the expand() method
+        int size = BinaryStdIn.readInt();
+        for(int i = 0; i < size; i++) {
+            int code = BinaryStdIn.readInt(2);
+            if(code == 0b00) {
+                BinaryStdOut.write('A', 8);
+            }
+            else if(code == 0b01) {
+                BinaryStdOut.write('C', 8);
+            }
+            else if(code == 0b10) {
+                BinaryStdOut.write('G', 8);
+            }
+            else {
+                BinaryStdOut.write('T', 8);
+            }
+        }
         // Use for-loop to go through each part of the compressed sequence
             // Expand each bit/hash into its original value using the maps to find original values
             // Add expanded value into sequence
