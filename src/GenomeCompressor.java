@@ -8,9 +8,6 @@
  *
  *  Compress or expand a genomic sequence using a 2-bit code.
  ******************************************************************************/
-
-import static java.lang.Long.toBinaryString;
-
 /**
  *  The {@code GenomeCompressor} class provides static methods for compressing
  *  and expanding a genomic sequence using a 2-bit code.
@@ -20,25 +17,17 @@ import static java.lang.Long.toBinaryString;
  *  @author Zach Blick
  */
 public class GenomeCompressor {
-    public static final int NUM_COMBOS = 360;
-    public static final int SEQUENCE_LENGTH  = 4;
-    public static final int RADIX = 4;
-    public static final int BIG_PRIME = 506683;
-    public static final int BEG_SIZE = 1000;
-    // Values holds values of each 4-character combo
-    public static int[] values;
-    // Keys holds values of each binary hash linked to each 4-character combo
-    public static int[] keys;
     /**
      * Reads a sequence of 8-bit extended ASCII characters over the alphabet
      * { A, C, T, G } from standard input; compresses and writes the results to standard output.
      */
-
     public static void compress() {
-        // TODO: complete the compress() method
+        // Reads entire String
         String remaining = BinaryStdIn.readString();
-        int binary = remaining.length();
-        BinaryStdOut.write(binary);
+        int codes = remaining.length();
+        // Writes number of codes
+        BinaryStdOut.write(codes);
+        // Checks each character and converts it to binary
         for(int i = 0; i < remaining.length(); i++) {
             char c = remaining.charAt(i);
             if(c == 'A') {
@@ -54,11 +43,6 @@ public class GenomeCompressor {
                 BinaryStdOut.write(0b11, 2);
             }
         }
-        // Make key for each possible pattern/sequence of 4 characters and hash them to a different value (figure out how to access read in data)
-        // For-loop to check every part of sequence:
-            // read next 4 bits of data using BinaryStdIn.readChar()--use key to find the hashes and store them as the hashes
-            // Add hash to sequence after converting hash to binary
-        // Save binary hashes as the compression file
         BinaryStdOut.close();
     }
 
@@ -66,8 +50,9 @@ public class GenomeCompressor {
      * Reads a binary sequence from standard input; expands and writes the results to standard output.
      */
     public static void expand() {
-        // TODO: complete the expand() method
+        // Finds front-loaded value of how many codes to count
         int size = BinaryStdIn.readInt();
+        // Converts and writes out each code as its corresponding character
         for(int i = 0; i < size; i++) {
             int code = BinaryStdIn.readInt(2);
             if(code == 0b00) {
@@ -83,16 +68,7 @@ public class GenomeCompressor {
                 BinaryStdOut.write('T', 8);
             }
         }
-        // Use for-loop to go through each part of the compressed sequence
-            // Expand each bit/hash into its original value using the maps to find original values
-            // Add expanded value into sequence
-        // Set total sequence as String back to its original place
         BinaryStdOut.close();
-    }
-
-    public static String hash(char toHash) {
-        int hash = (toHash * RADIX) % BIG_PRIME;
-        return Integer.toBinaryString(hash);
     }
 
     /**
